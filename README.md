@@ -16,5 +16,5 @@ Once you have all the tools listed above:
 - it will prompt for array 
 - please enter a valid array for eg - [1,2,3]
 
-## How to run tests for this application on your machine
+## How to run unit tests for this application on your machine
 -run `npm run test`in your terminal
