@@ -5,6 +5,16 @@
  */
 const algo = require('./quickSort');
 
+var rl = require('readline');
+var prompts = rl.createInterface(process.stdin, process.stdout);
+prompts.question('Please enter array data', function(arr) {
+  if (arr) {
+    arr = JSON.parse(arr);
+    findTriplet(arr);
+  }
+  process.exit();
+});
+
 function findTriplet(arr) {
   if (!arr) {
     return 'undefined array';
@@ -34,12 +44,12 @@ function findTriplet(arr) {
   if (result.length === 0) {
     return 'No such triplet exists';
   }
-
+  console.log(result);
   return result;
 }
 
-var arr = [4, 6, 3, 10, 9, 16];
-let result = findTriplet(arr, arr.length);
+//var arr = [4, 6, 3, 10, 9, 16,12,15,21,23,44,55];
+//let result = findTriplet(arr, arr.length);
 //console.log(result);
 module.exports = {
   findTriplet: findTriplet
