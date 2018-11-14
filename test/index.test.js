@@ -15,5 +15,9 @@ describe('Index',function(){
             let result = findTriplet([2,1,4,11]);
             expect(result).to.equal('No such triplet exists');
         })
+        it('it should return undefined array found when no triplet found',function(){
+            let result = findTriplet();
+            expect(result).to.equal('undefined array');
+        })
     })
 })

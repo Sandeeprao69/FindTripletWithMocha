@@ -3,15 +3,18 @@
  * @param {Array} arr
  * @param {number} n
  */
+const algo = require('./quickSort');
+
 function findTriplet(arr) {
+  if (!arr) {
+    return 'undefined array';
+  }
   let n = arr.length;
   if (n === 0) {
     return 'Empty array';
   }
-  // sort the array
-  arr = arr.sort((a, b) => {
-    return a - b;
-  });
+
+  arr = algo.quickSort(arr);
 
   let result = [];
   //TO check if triplet exists
@@ -21,9 +24,7 @@ function findTriplet(arr) {
     while (left < right) {
       if (arr[i] == arr[left] + arr[right]) {
         // pair found
-        //console.log('numbers are ' + arr[i] + ' ' + arr[right] + ' ' + arr[left]);
-        result.push({total:arr[i],left:arr[right],right:arr[left]});
-        //i--;
+        result.push({ total: arr[i], left: arr[right], right: arr[left] });
         break;
       } else if (arr[i] > arr[left] + arr[right]) left += 1;
       else right -= 1;
@@ -35,7 +36,6 @@ function findTriplet(arr) {
   }
 
   return result;
-
 }
 
 var arr = [4, 6, 3, 10, 9, 16];
