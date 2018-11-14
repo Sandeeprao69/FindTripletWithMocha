@@ -1,4 +1,10 @@
 # FindTripletWithMocha
+this app takes an array of numbers return possible combinations where sum of two number will be equals to third number.<br/>
+for eg if array is [4,6,3,10,9,16]<br/>
+combination would be <br/>
+4+6=10<br/>
+6+3=9,<br/>
+6+10=16<br/>
 
 ### Installation
 Make sure you have the following tools installed on your machine before running this project:
